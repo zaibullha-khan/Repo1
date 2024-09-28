@@ -14,7 +14,6 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.actionDriver.Action;
 import com.base.BaseClass1;
 import com.pageObject.AddProductPage;
@@ -38,7 +37,7 @@ public class AddProdcutPageTest extends BaseClass1
 //    or
 		addProduct.searchField("Build your own computer");
 		addProduct.ClickOnSearchBtn();
-	    driver.findElement(By.xpath("//h2[@class='product-title']//a[normalize-space()='Build your own computer']")).click();//click on product
+	        driver.findElement(By.xpath("//h2[@class='product-title']//a[normalize-space()='Build your own computer']")).click();//click on product
 	}										
 	@Test
     public void SelectProce22GHzValidation() throws InterruptedException 
@@ -60,7 +59,7 @@ public class AddProdcutPageTest extends BaseClass1
 			  //getText again
 	          System.out.println(text2);
 	          //print
-              Assert.assertEquals(resultWD,text2);
+                   Assert.assertEquals(resultWD,text2);
     		}
 	@Test
     public void SelectProce25GHzValidation() throws InterruptedException 
@@ -77,8 +76,8 @@ public class AddProdcutPageTest extends BaseClass1
 	        //ScrollDown
 	        addProduct.SelectProcessor("2");
     		  //select processor
-			  Thread.sleep(2000);			    
-		      String text2=addProduct.getTextForAmount();
+		  Thread.sleep(2000);			    
+		  String text2=addProduct.getTextForAmount();
 			  //getText again
 	          System.out.println(text2);
 	          //print
