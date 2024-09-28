@@ -1,7 +1,6 @@
 package TestClass;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +10,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.base.BaseClass1;
 import com.pageObject.AddProductToShoppingCart_5;
 import com.pageObject.IndexPage;
@@ -22,11 +20,11 @@ public class IndexPageTest extends BaseClass1  {
 	
 	 IndexPage index;
 	 AddProductToShoppingCart_5 addPro;
-   @Parameters("url")
+       @Parameters("url")
 	@BeforeClass(groups= { "smoke","sanity","Regression"})//	Compulsory (groups= { "smoke","sanity","Regression"}) should take here if doing grouping testing
 	public void OpenWebsit(String url) throws InterruptedException
 	{ 
-	    driver.get(url);
+	        driver.get(url);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
@@ -38,7 +36,7 @@ public void TitleValidate() throws InterruptedException
 	String expectedTitle=driver.getTitle();
 	String actualTitle="nopCommerce demo store";
 	Assert.assertEquals(expectedTitle,actualTitle);
-    logs.info("get title verification");
+        logs.info("get title verification");
 }
 @Test(groups="smoke")
 public void nopCommerceLogoDispValidate() 
@@ -50,7 +48,7 @@ public void nopCommerceLogoDispValidate()
 public void RegBtnDisplayedValidate() 
 {       
 		//Boolean Btn1=
-		index.RegBtnDisplayed();
+        index.RegBtnDisplayed();
         Assert.assertTrue(true);       
 }
 @Test(groups="smoke")
