@@ -14,12 +14,12 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.actionDriver.Action;
 import com.base.BaseClass1;
 import com.pageObject.AddProductPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 @Listeners(com.utility.ListenerClass01.class)
+//	
 public class AddProdcutPageTest extends BaseClass1
 { 
 	AddProductPage addProduct;
@@ -38,7 +38,7 @@ public class AddProdcutPageTest extends BaseClass1
 //    or
 		addProduct.searchField("Build your own computer");
 		addProduct.ClickOnSearchBtn();
-	    driver.findElement(By.xpath("//h2[@class='product-title']//a[normalize-space()='Build your own computer']")).click();//click on product
+	        driver.findElement(By.xpath("//h2[@class='product-title']//a[normalize-space()='Build your own computer']")).click();//click on product
 	}										
 	@Test
     public void SelectProce22GHzValidation() throws InterruptedException 
@@ -56,12 +56,12 @@ public class AddProdcutPageTest extends BaseClass1
 	        addProduct.SelectProcessor("1");
     		  //select processor
 	          //Use waith explicitky wait instead of thread
-			  Thread.sleep(2000);	
-		      String text2=addProduct.getTextForAmount();
-			  //getText again
-	          System.out.println(text2);
-	          //print
-              Assert.assertEquals(resultWD,text2);
+	        Thread.sleep(2000);	
+	        String text2=addProduct.getTextForAmount();
+		 //getText again
+	        System.out.println(text2);
+	         //print
+                Assert.assertEquals(resultWD,text2);
     		}
 	@Test
     public void SelectProce25GHzValidation() throws InterruptedException 
