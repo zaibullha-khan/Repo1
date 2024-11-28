@@ -23,7 +23,7 @@ public class IndexPageTest extends BaseClass1  {
 	 IndexPage index;
 	 AddProductToShoppingCart_5 addPro;
    @Parameters("url")
-	@BeforeClass(groups= { "smoke","sanity","Regression"})//	Compulsory (groups= { "smoke","sanity","Regression"}) should take here if doing grouping testing
+	@BeforeClass(groups= { "smoke","sanity","Regression"})//	Compulsory should be take(groups= { "smoke","sanity","Regression"}) should take here if doing grouping testing
 	public void OpenWebsit(String url) throws InterruptedException
 	{ 
 	    driver.get(url);
