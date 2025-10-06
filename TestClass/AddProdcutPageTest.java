@@ -38,7 +38,8 @@ public class AddProdcutPageTest extends BaseClass1
 		addProduct.searchField("Build your own computer");
 		addProduct.ClickOnSearchBtn();
 	        driver.findElement(By.xpath("//h2[@class='product-title']//a[normalize-space()='Build your own computer']")).click();//click on product
-	}										
+	}	
+	//
 	@Test
     public void SelectProce22GHzValidation() throws InterruptedException 
     {     
