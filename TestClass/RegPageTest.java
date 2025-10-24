@@ -33,7 +33,7 @@ public class RegPageTest extends BaseClass1 {
 		      index=new IndexPage(driver);
 		      index.RegBtnClick(); 
 	    }
-		@Test(dataProvider="Registration", groups= {"Regression"})
+		@Test(dataProvider="Registration", groups= {"Regression"}) // data provider used here
 		public void RegTest(String fname,String lname,String Email,String Cname,String pwd,String Cpwd,String DOD,String DOM,String DOY,String res) throws InterruptedException
 		{  
 //		System.out.println(fname);
